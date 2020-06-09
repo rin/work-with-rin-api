@@ -1,4 +1,4 @@
-const { GraphQLServer } = require('graphql-yoga')
+const { GraphQLServer } = require('graphql-yoga');
 
 const typeDefs = `
   type Skill {
@@ -37,20 +37,23 @@ const resolvers = {
   },
 };
 
+const asciiArt = "#                 _            _ _   _      ___ _      \r\n# __ __ _____ _ _| |__ __ __ _(_) |_| |_   | _ (_)_ _  \r\n# \\ V  V \/ _ \\ \'_| \/ \/ \\ V  V \/ |  _| \' \\  |   \/ | \' \\ \r\n#  \\_\/\\_\/\\___\/_| |_\\_\\  \\_\/\\_\/|_|\\__|_||_| |_|_\\_|_||_|\r\n#\r\n";
+const defaultPlaygroundQuery = 
+`query {
+  skills {
+    name
+  }
+  links {
+    title
+    url
+  }
+}
+`;
 const server = new GraphQLServer({ typeDefs, resolvers });
 const options = {
   playground: '/',
   endpoint: '/api',
-  defaultPlaygroundQuery: 
-  `query {
-    skills {
-      name
-    }
-    links {
-      title
-      url
-    }
-  }`
+  defaultPlaygroundQuery: asciiArt + defaultPlaygroundQuery,
 };
 
-server.start(options, () => console.log('Server is running on localhost:4000'));
+server.start(options, () => console.log('Server running on port 4000'));
