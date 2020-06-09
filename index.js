@@ -12,11 +12,17 @@ const typeDefs = `
     type: String!
   }
 
+  type About {
+    text: String!
+  }
+
   type Query {
+    about: About
     skills: [Skill]
     links: [Link]
   }
-`
+`;
+
 
 const skills = [
   { name: 'React.js', rating: 87 },
@@ -30,16 +36,24 @@ const links = [
   { title: "Rin's CV", url: 'http://rinscv.de/bla.pdf', type: 'download' },
 ];
 
+const about = { text: "Welcome! This is a simple backend for http://work-with.rin-raeuber.com/ using GraphQL." };
+
 const resolvers = {
   Query: {
+    about: () => about,
     skills: () => skills,
     links: () => links,
   },
 };
 
 const asciiArt = "#                 _            _ _   _      ___ _      \r\n# __ __ _____ _ _| |__ __ __ _(_) |_| |_   | _ (_)_ _  \r\n# \\ V  V \/ _ \\ \'_| \/ \/ \\ V  V \/ |  _| \' \\  |   \/ | \' \\ \r\n#  \\_\/\\_\/\\___\/_| |_\\_\\  \\_\/\\_\/|_|\\__|_||_| |_|_\\_|_||_|\r\n#\r\n";
+const welcomeText = `# Welcome! 
+# This is a simple GraphQL backend 
+# for http://work-with.rin.li/ .
+`;
 const defaultPlaygroundQuery = 
-`query {
+`
+query {
   skills {
     name
   }
@@ -53,7 +67,7 @@ const server = new GraphQLServer({ typeDefs, resolvers });
 const options = {
   playground: '/',
   endpoint: '/api',
-  defaultPlaygroundQuery: asciiArt + defaultPlaygroundQuery,
+  defaultPlaygroundQuery: asciiArt + welcomeText + defaultPlaygroundQuery,
 };
 
 server.start(options, () => console.log('Server running on port 4000'));
