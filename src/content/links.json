@@ -1,0 +1,21 @@
+[{
+  "title": "github",
+  "url": "http://github.com/rin",
+  "type": "external"
+},
+{
+  "title": "LinkedIn",
+  "url": "http://linkedin.com/in/rinraeuber",
+  "type": "external"
+},
+{
+  "title": "Rin's CV",
+  "url": "http://rin-raeuber.com/resume/rin-raeuber-resume.pdf",
+  "type": "download"
+},
+{
+  "title": "Rin's Cover Letter",
+  "url": "http://rin-raeuber.com/resume/rin-raeuber-cover-letter.pdf",
+  "type": "download"
+}
+]

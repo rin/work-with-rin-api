@@ -1,0 +1,13 @@
+[{
+  "name": "React.js",
+  "rating": 87
+},
+{
+  "name": "Next.js",
+  "rating": 62
+},
+{
+  "name": "GraphQL",
+  "rating": 47
+}
+]

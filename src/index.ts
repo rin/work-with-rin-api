@@ -1,3 +1,4 @@
+require('dotenv').config()
 const { GraphQLServer } = require('graphql-yoga');
 
 const typeDefs = `
@@ -16,33 +17,34 @@ const typeDefs = `
     text: String!
   }
 
+  type Contact {
+    email: String!
+  }
+
   type Query {
     about: About
-    skills: [Skill]
+    technologies: [Skill]
+    languages: [Skill]
+    tools: [Skill]
     links: [Link]
+    contact: Contact
   }
 `;
 
-
-const skills = [
-  { name: 'React.js', rating: 87 },
-  { name: 'Next.js', rating: 62 },
-  { name: 'GraphQL', rating: 47 },
-];
-
-const links = [
-  { title: 'github', url: 'http://github.com/rin', type: 'external' },
-  { title: 'LinkedIn', url: 'http://linkedin.com/in/rinraeuber', type: 'external' },
-  { title: "Rin's CV", url: 'http://rinscv.de/bla.pdf', type: 'download' },
-];
+const contact = {
+  email: "mail@rin-raeuber.com",
+};
 
 const about = { text: "Welcome! This is a simple backend for http://work-with.rin-raeuber.com/ using GraphQL." };
 
 const resolvers = {
   Query: {
     about: () => about,
-    skills: () => skills,
-    links: () => links,
+    languages: () => require('./content/languages.json'),
+    technologies: () => require('./content/technologies.json'),
+    tools: () => require('./content/technologies.json'),
+    links: () => require('./content/links.json'),
+    contact: () => contact,
   },
 };
 
@@ -54,7 +56,7 @@ const welcomeText = `# Welcome!
 const defaultPlaygroundQuery = 
 `
 query {
-  skills {
+  languages {
     name
   }
   links {
@@ -66,8 +68,9 @@ query {
 const server = new GraphQLServer({ typeDefs, resolvers });
 const options = {
   playground: '/',
-  endpoint: '/api',
+  port: process.env.GRAPHQL_PORT,
+  endpoint: process.env.API_ENDPOINT,
   defaultPlaygroundQuery: asciiArt + welcomeText + defaultPlaygroundQuery,
 };
 
-server.start(options, () => console.log('Server running on port 4000'));
+server.start(options, () => console.log('Server running on port ', process.env.GRAPHQL_PORT));
