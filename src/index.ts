@@ -68,9 +68,9 @@ query {
 const server = new GraphQLServer({ typeDefs, resolvers });
 const options = {
   playground: '/',
-  port: process.env.GRAPHQL_PORT,
+  port: process.env.PORT,
   endpoint: process.env.API_ENDPOINT,
   defaultPlaygroundQuery: asciiArt + welcomeText + defaultPlaygroundQuery,
 };
 
-server.start(options, () => console.log('Server running on port ', process.env.GRAPHQL_PORT));
+server.start(options, () => console.log('Server running on port ', process.env.PORT || 4000 ));
