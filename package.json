@@ -1,6 +1,12 @@
 {
   "name": "work-with-rin-api",
   "description": "The backend to the 'Work With Rin' page.",
+  "version": "1.2.1",
+  "main": "src/index.ts",
+  "license": "MIT",
+  "author": "Rin Raeuber <mail@rin-raeuber.com>",
+  "homepage": "http://workwith.rin-raeuber.com/",
+  "repository": "github:rin/work-with-rin-api",
   "engines": {
     "node": "12.x"
   },
