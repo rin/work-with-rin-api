@@ -1,0 +1,27 @@
+  type Skill {
+    name: String!
+    rating: Int
+  }
+
+  type Link {
+    title: String!
+    url: String!
+    type: String!
+  }
+
+  type About {
+    text: String!
+  }
+
+  type Contact {
+    email: String!
+  }
+
+  type Query {
+    about: About
+    technologies: [Skill]
+    languages: [Skill]
+    tools: [Skill]
+    links: [Link]
+    contact: Contact
+  }
