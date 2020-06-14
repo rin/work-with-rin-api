@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 require('dotenv').config()
 const { GraphQLServer } = require('graphql-yoga');
 
@@ -11,8 +12,9 @@ const resolvers = {
     about: () => about,
     languages: () => require('./content/languages.json'),
     technologies: () => require('./content/technologies.json'),
-    tools: () => require('./content/technologies.json'),
+    tools: () => require('./content/tools.json'),
     links: () => require('./content/links.json'),
+    interests: () => require('./content/interests.json'),
     contact: () => contact,
   },
 };
