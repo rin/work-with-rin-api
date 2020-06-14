@@ -11,6 +11,7 @@
     "node": "12.x"
   },
   "scripts": {
+    "lint": "eslint",
     "start": "ts-node src/index.ts",
     "test": "jest"
   },
@@ -21,7 +22,11 @@
   },
   "devDependencies": {
     "@types/jest": "^25.2.3",
+    "@typescript-eslint/eslint-plugin": "^3.2.0",
+    "@typescript-eslint/parser": "^3.2.0",
+    "eslint": "^7.2.0",
     "jest": "^26.0.1",
+    "prettier": "^2.0.5",
     "supertest": "^4.0.2",
     "ts-jest": "^26.1.0",
     "typescript": "^3.9.5"
