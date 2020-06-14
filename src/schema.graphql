@@ -1,10 +1,12 @@
 type Skill {
   name: String!
-  rating: Int
+  rating: Int,
+  marked: Boolean
 }
 
 type Item {
   name: String!
+  marked: Boolean
 }
 
 type Link {

@@ -1,6 +1,7 @@
 [{
   "name": "React.js",
-  "rating": 87
+  "rating": 87,
+  "marked": true
 },
 {
   "name": "Next.js",
