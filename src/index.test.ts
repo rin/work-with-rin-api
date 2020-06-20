@@ -87,6 +87,26 @@ test("get tools", async (done) => {
     });
 });
 
+
+test("get hours", async (done) => {
+  request
+    .post(API_ENDPOINT)
+    .send({
+      query: "{ hours { label start end }  }",
+    })
+    .set("Accept", "application/json")
+    .expect("Content-Type", /json/)
+    .expect(200)
+    .end(function (err: Error, res: supertest.Response) {
+      if (err) return done(err);
+      const hours = require('./content/hours.json');
+      const { body : { data: { hours: result }}} = res;
+      expect(result.length).toEqual(hours.length);
+      expect(result[0].label).toContain("May");
+      done();
+    });
+});
+
 test("get links", async (done) => {
   request
     .post(API_ENDPOINT)

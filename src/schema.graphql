@@ -19,6 +19,12 @@ type About {
   text: String!
 }
 
+type Hour {
+  label: String!,
+  start: Int!,
+  end: Int!,
+}
+
 type Contact {
   email: String!
 }
@@ -30,5 +36,6 @@ type Query {
   tools: [Skill]
   interests: [Item]
   links: [Link]
+  hours: [Hour]
   contact: Contact
 }
