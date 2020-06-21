@@ -1,14 +1,22 @@
 [{
   "name": "React.js",
-  "rating": 87,
+  "rating": 89,
   "marked": true
 },
 {
   "name": "Next.js",
-  "rating": 62
+  "rating": 72
 },
 {
   "name": "GraphQL",
-  "rating": 47
+  "rating": 83
+},
+{
+  "name": "Rails",
+  "rating": 94
+},
+{
+  "name": "Node",
+  "rating": 79
 }
 ]
