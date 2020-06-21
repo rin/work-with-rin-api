@@ -5,7 +5,7 @@
     "link": "http://aimementoring.com/",
     "start": "01/09/2018",
     "end": "01/07/2020",
-    "description": ""
+    "description": "Built React applications with Typescript, Express & GraphQL as well as APIs using Node, developed a component library with Styleguidist."
   },
   {
     "title": "Software Engineer",
@@ -13,7 +13,7 @@
     "link": "https://bitcrowd.net/en",
     "start": "01/04/2013",
     "end": "01/04/2017",
-    "description": ""
+    "description": "Developed greenfield Rails projects for startups using TDD, including building custom RESTful APIs, integrating existing APIs, as well as consultancy work."
   },
   {
     "title": "Junior Rails Developer & Quality Assurance",
@@ -21,7 +21,7 @@
     "link": "http://9elements.com/",
     "start": "01/11/2010",
     "end": "01/03/2013",
-    "description": ""
+    "description": "Helped building Rails applications for clients, learnt to write tests."
   },
   {
     "title": "B.sc. Computer Science",
@@ -29,6 +29,6 @@
     "link": "https://www.fh-dortmund.de/en/index.php",
     "start": "01/10/2009",
     "end": "01/03/2013",
-    "description": ""
+    "description": "Thesis \"Artificial Art: Generating Images using Evolutionary Algorithms in JavaScript\""
   }
 ]
