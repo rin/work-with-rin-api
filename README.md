@@ -30,4 +30,5 @@ yarn start
 - The app should be running under `http://localhost:4000`.
 
 ## Try it live
-[Work With Rin API on Heroku](https://workwithrin.herokuapp.com/)
+[Work With Rin API on Heroku](https://work-with-rin-api.herokuapp.com/)
+[Check out the frontend](http://workwith.rinrae.com/)
