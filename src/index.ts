@@ -15,6 +15,7 @@ const resolvers = {
     tools: () => require('./content/tools.json'),
     links: () => require('./content/links.json'),
     interests: () => require('./content/interests.json'),
+    experience: () => require('./content/experience.json'),
     hours: () => require('./content/hours.json'),
     contact: () => contact,
   },

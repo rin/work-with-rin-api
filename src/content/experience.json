@@ -1,0 +1,34 @@
+[
+  {
+    "title": "Fullstack Engineer",
+    "organisation": "AIME Mentoring",
+    "link": "http://aimementoring.com/",
+    "start": "01/09/2018",
+    "end": "01/07/2020",
+    "description": ""
+  },
+  {
+    "title": "Software Engineer",
+    "organisation": "Bitcrowd",
+    "link": "https://bitcrowd.net/en",
+    "start": "01/04/2013",
+    "end": "01/04/2017",
+    "description": ""
+  },
+  {
+    "title": "Junior Rails Developer & Quality Assurance",
+    "organisation": "9elements",
+    "link": "http://9elements.com/",
+    "start": "01/11/2010",
+    "end": "01/03/2013",
+    "description": ""
+  },
+  {
+    "title": "B.sc. Computer Science",
+    "organisation": "University of Applied Sciences Dortmund",
+    "link": "https://www.fh-dortmund.de/en/index.php",
+    "start": "01/10/2009",
+    "end": "01/03/2013",
+    "description": ""
+  }
+]

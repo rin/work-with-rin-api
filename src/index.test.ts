@@ -144,6 +144,25 @@ test("get interests", async (done) => {
     });
 });
 
+test("get experience", async (done) => {
+  request
+    .post(API_ENDPOINT)
+    .send({
+      query: "{ experience { title organisation start end }  }",
+    })
+    .set("Accept", "application/json")
+    .expect("Content-Type", /json/)
+    .expect(200)
+    .end(function (err: Error, res: supertest.Response) {
+      if (err) return done(err);
+      const experience = require('./content/experience.json');
+      const { body : { data: { experience: result }}} = res;
+      expect(result.length).toEqual(experience.length);
+      expect((result[0].organisation)).toEqual("AIME Mentoring");
+      done();
+    });
+});
+
 test("get contact", async (done) => {
   request
     .post(API_ENDPOINT)

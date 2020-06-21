@@ -29,6 +29,15 @@ type Contact {
   email: String!
 }
 
+type Experience {
+  start: String!,
+  end: String,
+  organisation: String!,
+  link: String!, 
+  title: String!,
+  description: String,
+}
+
 type Query {
   about: About
   technologies: [Skill]
@@ -37,5 +46,6 @@ type Query {
   interests: [Item]
   links: [Link]
   hours: [Hour]
+  experience: [Experience]
   contact: Contact
 }
