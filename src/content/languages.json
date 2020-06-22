@@ -1,19 +1,19 @@
 [{
   "name": "Typescript",
-  "rating": 82,
+  "rating": 4,
   "marked": true
 },
 {
   "name": "Javascript",
-  "rating": 89,
+  "rating": 4,
   "marked": true
 },
 {
   "name": "Ruby",
-  "rating": 93
+  "rating": 5
 },
 {
   "name": "Lang Belta",
-  "rating": 57
+  "rating": 3
 }
 ]

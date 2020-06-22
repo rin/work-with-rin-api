@@ -1,17 +1,17 @@
 [{
   "name": "git",
-  "rating": 96
+  "rating": 5
 },
 {
   "name": "VS Code",
-  "rating": 81
+  "rating": 4
 },
 {
   "name": "CI",
-  "rating": 73
+  "rating": 4
 },
 {
   "name": "Docker",
-  "rating": 61
+  "rating": 2
 }
 ]
