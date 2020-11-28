@@ -1,5 +1,13 @@
 [
   {
+    "title": "Frontend Engineer",
+    "organisation": "HelpDocs",
+    "link": "http://helpdocs.io/",
+    "start": "03/08/2020",
+    "end": "11/12/2020",
+    "description": "Built and extended components of a React application used by thousands of customers."
+  },
+  {
     "title": "Fullstack Engineer",
     "organisation": "AIME Mentoring",
     "link": "http://aimementoring.com/",
